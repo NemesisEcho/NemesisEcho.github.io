@@ -6,7 +6,7 @@ function type(text) {
     for (let i = 0; i < text.length; i++) {
         setTimeout(() => {
             h2.innerText = text.substring(0, (i + 1));
-        }, 150 * i);
+        }, 100 * i);
     };
 };
 
