@@ -10,14 +10,20 @@ function type(text) {
     };
 };
 
-const statuses = ["gamer", "web developer", "java developer", "javascript developer", "NodeJS developer", "ExpressJS developer", "student Cyber Security"];
+const statuses = ["Gamer", "Web developer", "Java developer", "Javascript developer", "NodeJS developer", "ExpressJS developer", "Student Cyber Security"];
 
-const startStatus = statuses[Math.floor(Math.random() * statuses.length)];
+let latestStatus = statuses[Math.floor(Math.random() * statuses.length)];
 
-type(startStatus)
+type(latestStatus)
 
 setInterval(() => {
-    const status = statuses[Math.floor(Math.random() * statuses.length)];
+    let status = statuses[Math.floor(Math.random() * statuses.length)];
 
-    type(status)
-}, 4000);
+    while (status === latestStatus) {
+        status = statuses[Math.floor(Math.random() * statuses.length)];
+    };
+
+    type(status);
+
+    latestStatus = status;
+}, 5000);
