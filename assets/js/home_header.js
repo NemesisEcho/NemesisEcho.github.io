@@ -1,11 +1,11 @@
-const h2 = document.querySelector("header h2");
+const h3 = document.querySelector("header h3");
 
 function type(text) {
-    h2.innerText = "";
+    h3.innerText = "";
 
     for (let i = 0; i < text.length; i++) {
         setTimeout(() => {
-            h2.innerText = text.substring(0, (i + 1));
+            h3.innerText = text.substring(0, (i + 1));
         }, 100 * i);
     };
 };
