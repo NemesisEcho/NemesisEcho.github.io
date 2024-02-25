@@ -12,6 +12,10 @@ function type(text) {
 
 const statuses = ["gamer", "web developer", "java developer", "javascript developer", "NodeJS developer", "ExpressJS developer", "student Cyber Security"];
 
+const startStatus = statuses[Math.floor(Math.random() * statuses.length)];
+
+type(startStatus)
+
 setInterval(() => {
     const status = statuses[Math.floor(Math.random() * statuses.length)];
 
